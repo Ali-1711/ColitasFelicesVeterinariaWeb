@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+</head>
+
+<body class="bg-gray-10Clínica y Veterinaria Colitas Felices0 min-h-screen">
+
+    <!-- Barra superior -->
+    <header
+        class="h-16 bg-green-900 text-white py-4 px-6 flex justify-between items-center w-full fixed top-0 z-20 shadow-lg">
+        <div class="flex items-center gap-4">
+            <button onclick="toggleSidebar()" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <h1 class="text-xl font-bold">Clínica Veterinaria Puente Blanco</h1>
+        </div>
+        <span th:text="'Bienvenido, ' + ${dashboard.fullName}" class="text-sm md:text-base"></span>
+
+
+    </header>
+
+    <div class="flex w-full min-h-screen">
+        <aside id="sidebar" class="fixed top-[64px] md:top-16 left-0 w-64 h-screen bg-gray-800 text-white flex flex-col justify-between z-20
+              transform md:translate-x-0 -translate-x-full transition-transform duration-300 ease-in-out">
+            <div>
+                <nav class="flex flex-col p-4 space-y-4">
+                    <!-- Dashboard -->
+                    <a th:href="@{/dashboard}" class="flex items-center gap-3 text-green-400 bg-gray-700 p-2 rounded">
+                        <i class="fa-solid fa-table-columns"></i>
+                        Dashboard
+                    </a>
+
+                    <!-- Agendar Cita -->
+                    <a th:href="@{/book-appointment}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Agendar Cita
+                    </a>
+
+                    <!-- Ver Citas -->
+                    <a th:href="@{/appointments}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+                            class="fa-solid fa-clock"></i>
+                        Ver Citas
+                    </a>
+
+                    <!-- Cancelar Cita -->
+                    <a th:href="@{/cancel-appointment}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+                            class="fa-solid fa-calendar-xmark"></i>
+                        Cancelar Cita
+                    </a>
+
+                    <!-- Veterinarios -->
+                    <a th:href="@{/veterinarians}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+                            class="fa-solid fa-stethoscope"></i>
+                        Veterinarios
+                    </a>
+
+                    <!-- Vacunación -->
+                    <a th:href="@{/vaccination}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+                        <i class="fa-solid fa-syringe"></i>
+                        Vacunación
+                    </a>
+                    <!-- Botón de cierre de sesión -->
+                    <button onclick="logout()"
+                        class="m-4 flex items-center justify-center gap-2 bg-gray-100 text-red-500 px-4 py-2 rounded hover:bg-gray-200">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+                    </button>
+                </nav>
+            </div>
+        </aside>
+
+
+        <main class="flex-1 bg-gray-100 min-h-screen flex justify-center items-start pt-24 px-4 md:pl-64">
+            <div class="w-full max-w-xl bg-white shadow-2xl rounded-xl border-t-8 border-yellow-500 p-8">
+                <h2 class="text-3xl font-extrabold text-center text-gray-800 mb-8">Registrar Mascota</h2>
+                <form id="pet-form" class="space-y-6">
+                    <!-- Nombre -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Nombre de la Mascota</label>
+                        <input type="text" name="name" required
+                            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm" />
+                    </div>
+
+                    <!-- Edad -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Edad</label>
+                        <select name="age" required
+                            class="text-sm md:text-base w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm">
+                            <option value="">Selecciona la Edad</option>
+                            <th:block th:each="i : ${#numbers.sequence(0, 20)}">
+                                <option th:value="${i}" th:text="${i}"></option>
+                            </th:block>
+                        </select>
+                    </div>
+
+
+                    <!-- Sexo -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Sexo</label>
+                        <div class="flex items-center space-x-6 mt-1">
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="sex" value="Macho" required class="accent-blue-500" />
+                                Macho
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="sex" value="Hembra" class="accent-pink-500" />
+                                Hembra
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Especie -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Especie</label>
+                        <div class="flex items-center space-x-6 mt-1">
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="type" value="Gato" required class="accent-yellow-500" />
+                                Gato
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="type" value="Perro" class="accent-green-500" />
+                                Perro
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Peso -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Peso (KG)</label>
+                        <input type="number" name="weight" step="0.1" min="1" required
+                            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm" />
+                    </div>
+
+                    <!-- Raza -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Raza</label>
+                        <input type="text" name="breed" required
+                            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-sm" />
+                    </div>
+
+                    <!-- Botón -->
+                    <div>
+                        <button type="submit"
+                            class="w-full bg-yellow-600 hover:bg-yellow-700 transition text-white font-semibold py-2 rounded-lg shadow-md">
+                            ➕ Añadir Mascota
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+
+    </div>
+
+    <script>
+        function logout() {
+            // Eliminar cookie jwt (establece expiración en el pasado)
+            document.cookie = "jwt=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+
+            // Redirigir al login o home
+            window.location.href = "/";
+        }
+
+        //OCULTAR SIDEBAR TIPO HAMBURGUESITA
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('-translate-x-full');
+        }
+
+        // Cerrar sidebar al hacer clic en enlaces (solo en móvil)
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('#sidebar a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 768) {
+                        document.getElementById('sidebar').classList.add('-translate-x-full');
+                    }
+                });
+            });
+
+            // Cerrar si se hace clic fuera del sidebar en móvil
+            document.addEventListener('click', (e) => {
+                const sidebar = document.getElementById('sidebar');
+                const toggleBtn = document.querySelector('button[onclick="toggleSidebar()"]');
+
+                if (
+                    window.innerWidth < 768 &&
+                    !sidebar.contains(e.target) &&
+                    !toggleBtn.contains(e.target)
+                ) {
+                    sidebar.classList.add('-translate-x-full');
+                }
+            });
+        });
+
+        //validacion peso 
+        document.querySelector("form").addEventListener("submit", function (e) {
+            const pesoInput = document.querySelector('input[name="weight"]');
+            const peso = parseFloat(pesoInput.value);
+            if (isNaN(peso) || peso <= 0) {
+                e.preventDefault();
+                alert("El peso debe ser un número positivo mayor que cero.");
+                pesoInput.focus();
+            }
+        });
+
+
+        document.getElementById("pet-form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            // Validación extra por si acaso
+            const peso = parseFloat(formData.get("weight"));
+            if (isNaN(peso) || peso <= 0) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Peso inválido',
+                    text: 'El peso debe ser mayor a 0 kg.',
+                    confirmButtonColor: '#f59e0b'
+                });
+                return;
+            }
+
+            try {
+                const res = await fetch("/pets", {
+                    method: "POST",
+                    body: formData,
+                    credentials: "include"
+                });
+
+                if (res.redirected || res.ok) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Mascota registrada!',
+                        text: 'La mascota ha sido añadida correctamente.',
+                        confirmButtonColor: '#38a169'
+                    }).then(() => {
+                        window.location.href = "/dashboard";
+                    });
+                } else {
+                    const text = await res.text();
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'No se pudo registrar la mascota.',
+                        confirmButtonColor: '#e3342f'
+                    });
+                }
+            } catch (error) {
+                console.error(error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de red',
+                    text: 'No se pudo conectar al servidor.',
+                    confirmButtonColor: '#e3342f'
+                });
+            }
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
