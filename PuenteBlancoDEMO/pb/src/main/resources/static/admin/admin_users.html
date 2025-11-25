@@ -14,7 +14,7 @@
 <body class="bg-gray-100 min-h-screen flex flex-col">
   <!-- Barra superior -->
   <header class="bg-green-600 text-white py-4 px-4 sm:px-6 flex justify-between items-center w-full shadow-md z-20">
-    <h1 class="text-xl font-bold">Clínica y Veterinaria Colitas Felices</h1>
+    <h1 class="text-xl font-bold">Colitas Felices</h1>
     <span>Gestión de Usuarios</span>
   </header>
 
@@ -229,7 +229,8 @@
 
 
  <script>
-  const apiBase = '/api/admin/users';
+  const apiUser = '/api/admin/users';
+  const apiVeterinaria = '/api/client/veterinarians';
 
   let currentRoleFilter = 'ALL';
   let allUsers = [];
@@ -269,7 +270,7 @@
 
       if (!motivo || !userId) return;
 
-      fetch(`${apiBase}/${userId}/estado`, {
+      fetch(`${apiUser}/${userId}/estado`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ motivo })
@@ -313,9 +314,10 @@
     }
 
     function loadUsers() {
-      fetch(apiBase + (currentRoleFilter !== 'ALL' ? `?rol=${currentRoleFilter}` : ''))
+      fetch('/api/client/veterinarians')
         .then(res => res.json())
         .then(users => {
+        console.log("Holi", users);
           allUsers = users;
           applyFilters();
         });
@@ -356,7 +358,7 @@
         userIdToDisable.value = id;
         motivoModal.classList.remove("hidden");
       } else {
-        fetch(`${apiBase}/${id}/estado`, { method: 'PATCH' })
+        fetch(`${apiUser}/${id}/estado`, { method: 'PATCH' })
           .then(() => loadUsers());
       }
     };
@@ -387,7 +389,7 @@
       };
 
       const method = id ? 'PUT' : 'POST';
-      const url = id ? `${apiBase}/${id}` : apiBase;
+      const url = id ? `${apiUser}/${id}` : apiUser;
 
       fetch(url, {
         method,
@@ -428,7 +430,7 @@
         roleId: document.getElementById("rolRegistro").value
       };
 
-      fetch(apiBase, {
+      fetch(apiUser, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
