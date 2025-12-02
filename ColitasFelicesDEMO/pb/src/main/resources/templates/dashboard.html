@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica y Veterinaria Colitas Felices</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!--
+     <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+
+<body class="bg-gray-100 min-h-screen flex">
+
+    <!-- Barra superior -->
+    <header
+        class="h-16 bg-green-900 text-white py-4 px-6 flex justify-between items-center w-full fixed top-0 z-20 shadow-lg">
+        <div class="flex items-center gap-4">
+            <button onclick="toggleSidebar()" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <h1 class="text-xl font-bold">Colitas Felices</h1>
+        </div>
+        <span th:text="'Bienvenido, ' + ${dashboard.fullName}" class="text-sm md:text-base"></span>
+    </header>
+
+
+    <div class="flex w-full min-h-screen">
+        <aside id="sidebar" class="fixed top-[64px] md:top-16 left-0 w-64 h-screen bg-gray-800 text-white flex flex-col justify-between z-20
+              transform md:translate-x-0 -translate-x-full transition-transform duration-300 ease-in-out">
+            <div>
+                <nav class="flex flex-col p-4 space-y-4">
+                    <!-- Dashboard -->
+                    <a th:href="@{/dashboard}" class="flex items-center gap-3 text-green-400 bg-gray-700 p-2 rounded">
+                        <i class="fa-solid fa-table-columns"></i>
+                        Dashboard
+                    </a>
+
+                    <!-- Agendar Cita -->
+                    <a th:href="@{/book-appointment}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Agendar Cita
+                    </a>
+
+                    <!-- Ver Citas -->
+                    <a th:href="@{/appointments}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+                            class="fa-solid fa-clock"></i>
+                        Ver Citas
+                    </a>
+
+                    <!-- Cancelar Cita -->
+                    <a th:href="@{/cancel-appointment}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+                            class="fa-solid fa-calendar-xmark"></i>
+                        Cancelar Cita
+                    </a>
+
+                    <!-- Veterinarios -->
+                    <a th:href="@{/veterinarians}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+                            class="fa-solid fa-stethoscope"></i>
+                        Veterinarios
+                    </a>
+
+                    <!-- Vacunación -->
+                    <a th:href="@{/vaccination}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+                        <i class="fa-solid fa-syringe"></i>
+                        Vacunación
+                    </a>
+                    <!-- Botón de cierre de sesión -->
+                    <button onclick="logout()"
+                        class="m-4 flex items-center justify-center gap-2 bg-gray-100 text-red-500 px-4 py-2 rounded hover:bg-gray-200">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+                    </button>
+                </nav>
+            </div>
+        </aside>
+
+
+
+
+        <!-- Contenido principal -->
+        <main class="flex-1 p-6 md:p-10 pt-24 md:pt-24 ml-0 md:ml-64 bg-gray-100 min-h-screen">
+            <!-- Encabezado -->
+            <div class="mb-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Panel Principal</h2>
+                <p class="text-gray-600 text-base md:text-lg mt-1">Bienvenido a Colitas Felices 💛 </p>
+            </div>
+
+            <!-- Accesos rápidos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                <a th:href="@{/calendar}"
+                    class="flex flex-col justify-center items-center text-center bg-pink-500 hover:bg-pink-600 text-white py-6 px-4 rounded-xl shadow-lg transition-all transform hover:scale-105">
+                    <span class="text-lg font-semibold truncate">📅 Mostrar Calendario</span>
+                </a>
+                <a th:href="@{/payment-form}"
+                    class="flex flex-col justify-center items-center text-center bg-green-700 hover:bg-green-800 text-white py-6 px-4 rounded-xl shadow-lg transition-all transform hover:scale-105">
+                    <span class="text-lg font-semibold truncate">💳 Pagos</span>
+                </a>
+                <a th:href="@{/pets}"
+                    class="flex flex-col justify-center items-center text-center bg-blue-600 hover:bg-blue-700 text-white py-6 px-4 rounded-xl shadow-lg transition-all transform hover:scale-105">
+                    <span class="text-lg font-semibold truncate">🐾 Mascotas</span>
+                </a>
+            </div>
+
+            <!-- Sección de mascotas -->
+            <div class="bg-white border-2 border-blue-400 rounded-xl shadow-md p-6 mb-8">
+                <h3 class="text-2xl font-bold text-center text-blue-600 mb-4">Mis Mascotas</h3>
+
+                <div th:if="${pets.empty}" class="text-center text-gray-500">
+                    <p>No se encontraron mascotas registradas.</p>
+                </div>
+
+                <div th:if="${not pets.empty}" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div th:each="pet : ${pets}" class="border border-gray-200 rounded-lg p-4 bg-gray-50 shadow-sm">
+                        <p><strong>Nombre:</strong> <span th:text="${pet.name}"></span></p>
+                        <p><strong>Tipo:</strong> <span th:text="${pet.type}"></span></p>
+                        <p><strong>Raza:</strong> <span th:text="${pet.breed}"></span></p>
+                        <p><strong>Edad:</strong> <span th:text="${pet.age}"></span></p>
+                        <p><strong>Sexo:</strong> <span th:text="${pet.sex}"></span></p>
+                        <p><strong>Peso:</strong> <span th:text="${pet.weight} + ' kg'"></span></p>
+                        <button onclick="deletePet(this)" th:attr="data-id=${pet.id}"
+                            class="mt-3 text-red-600 hover:text-red-800 font-medium">
+                            Eliminar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Información de la clínica -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">📍 Información de la Clínica Veterinaria</h3>
+                <p><strong>Dirección:</strong> Mz. B Lote 3, P.J. Confraternidad, Ica – Perú.</p>
+                <p><strong>Email:</strong>colitasfelices.vet2021@gmail.com</p>
+            </div>
+        </main>
+
+
+        <!-- Scripts -->
+        <script>
+            function deletePet(button) {
+                const petId = button.getAttribute("data-id");
+
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "Esta acción eliminará la mascota de la lista.",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#e3342f', // rojo
+                    cancelButtonColor: '#6c757d',
+                    confirmButtonText: 'Sí, eliminar',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`/pets/${petId}`, {
+                            method: "DELETE",
+                            credentials: "include"
+                        })
+                            .then(res => {
+                                if (res.ok) {
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Eliminado',
+                                        text: 'La mascota ha sido eliminada correctamente.',
+                                        confirmButtonColor: '#38a169'
+                                    }).then(() => {
+                                        location.reload(); // Recargar después de confirmar
+                                    });
+                                } else {
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'Error',
+                                        text: 'No se pudo eliminar la mascota.',
+                                        confirmButtonColor: '#e3342f'
+                                    });
+                                }
+                            })
+                            .catch(err => {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Error de red',
+                                    text: 'Error de conexión al eliminar mascota.',
+                                    confirmButtonColor: '#e3342f'
+                                });
+                            });
+                    }
+                });
+            }
+
+            function logout() {
+                document.cookie = "jwt=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+                window.location.href = "/";
+            }
+
+
+            //OCULTAR SIDEBAR TIPO HAMBURGUESITA
+
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.toggle('-translate-x-full');
+            }
+
+            // Cerrar sidebar al hacer clic en enlaces (solo en móvil)
+            document.addEventListener('DOMContentLoaded', () => {
+                const links = document.querySelectorAll('#sidebar a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth < 768) {
+                            document.getElementById('sidebar').classList.add('-translate-x-full');
+                        }
+                    });
+                });
+
+                // Cerrar si se hace clic fuera del sidebar en móvil
+                document.addEventListener('click', (e) => {
+                    const sidebar = document.getElementById('sidebar');
+                    const toggleBtn = document.querySelector('button[onclick="toggleSidebar()"]');
+
+                    if (
+                        window.innerWidth < 768 &&
+                        !sidebar.contains(e.target) &&
+                        !toggleBtn.contains(e.target)
+                    ) {
+                        sidebar.classList.add('-translate-x-full');
+                    }
+                });
+            });
+
+            //intento de alerta bonita
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const params = new URLSearchParams(window.location.search);
+                if (params.get("success") === "true") {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Mascota registrada!',
+                        text: 'La mascota se ha añadido correctamente.',
+                        confirmButtonColor: '#38a169' // Verde
+                    });
+
+                    // Elimina el parámetro ?success=true de la URL sin recargar
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                }
+            });
+
+
+
+
+
+        </script>
+
+</body>
+
+</html>

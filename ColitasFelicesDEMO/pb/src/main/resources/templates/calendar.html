@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Clínica y Veterinaria Colitas Felices</title>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    #calendar {
+      background-color: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .fc .fc-toolbar-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Barra superior -->
+  <header
+    class="h-16 bg-green-900 text-white py-4 px-6 flex justify-between items-center w-full fixed top-0 z-20 shadow-lg">
+    <div class="flex items-center gap-4">
+      <button onclick="toggleSidebar()" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <h1 class="text-xl font-bold">Colitas Felices</h1>
+    </div>
+    <span th:text="'Bienvenido, ' + ${dashboard.fullName}" class="text-sm md:text-base"></span>
+  </header>
+
+
+  <div class="flex w-full min-h-screen">
+    <aside id="sidebar" class="fixed top-[64px] md:top-16 left-0 w-64 h-screen bg-gray-800 text-white flex flex-col justify-between z-20
+              transform md:translate-x-0 -translate-x-full transition-transform duration-300 ease-in-out">
+      <div>
+        <nav class="flex flex-col p-4 space-y-4">
+          <!-- Dashboard -->
+          <a th:href="@{/dashboard}" class="flex items-center gap-3 text-green-400 bg-gray-700 p-2 rounded">
+            <i class="fa-solid fa-table-columns"></i>
+            Dashboard
+          </a>
+
+          <!-- Agendar Cita -->
+          <a th:href="@{/book-appointment}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+            <i class="fa-solid fa-calendar-days"></i>
+            Agendar Cita
+          </a>
+
+          <!-- Ver Citas -->
+          <a th:href="@{/appointments}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+              class="fa-solid fa-clock"></i>
+            Ver Citas
+          </a>
+
+          <!-- Cancelar Cita -->
+          <a th:href="@{/cancel-appointment}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+              class="fa-solid fa-calendar-xmark"></i>
+            Cancelar Cita
+          </a>
+
+          <!-- Veterinarios -->
+          <a th:href="@{/veterinarians}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+              class="fa-solid fa-stethoscope"></i>
+            Veterinarios
+          </a>
+
+          <!-- Vacunación -->
+          <a th:href="@{/vaccination}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+            <i class="fa-solid fa-syringe"></i>
+            Vacunación
+          </a>
+          <!-- Botón de cierre de sesión -->
+          <button onclick="logout()"
+            class="m-4 flex items-center justify-center gap-2 bg-gray-100 text-red-500 px-4 py-2 rounded hover:bg-gray-200">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+          </button>
+        </nav>
+      </div>
+    </aside>
+
+
+    <!-- Contenido principal -->
+    <main class="flex-1 p-6 md:p-10 pt-24 md:pt-24 ml-0 md:ml-64 bg-gray-100 min-h-screen">
+      <h2 class="text-3xl font-bold mb-6">Calendario de Citas</h2>
+      <div id="calendar" class="max-w-6xl mx-auto"></div>
+    </main>
+  </div>
+
+  <!-- FullCalendar Core -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <!-- Idiomas -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales-all.global.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        locale: "es",
+        initialView: 'timeGridWeek',
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        slotMinTime: "08:00:00",
+        slotMaxTime: "18:00:00",
+        allDaySlot: false,
+        events: {
+          url: "/api/client/appointments/calendar",
+          method: "GET",
+          extraParams: {},
+          failure: function () {
+            alert("Error al cargar las citas en el calendario.");
+          },
+          credentials: "include" // 🔐 importante para JWT en cookie
+        }
+      });
+
+      calendar.render();
+    });
+
+    //OCULTAR SIDEBAR TIPO HAMBURGUESITA
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('-translate-x-full');
+    }
+
+    // Cerrar sidebar al hacer clic en enlaces (solo en móvil)
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('#sidebar a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 768) {
+            document.getElementById('sidebar').classList.add('-translate-x-full');
+          }
+        });
+      });
+
+      // Cerrar si se hace clic fuera del sidebar en móvil
+      document.addEventListener('click', (e) => {
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.querySelector('button[onclick="toggleSidebar()"]');
+
+        if (
+          window.innerWidth < 768 &&
+          !sidebar.contains(e.target) &&
+          !toggleBtn.contains(e.target)
+        ) {
+          sidebar.classList.add('-translate-x-full');
+        }
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

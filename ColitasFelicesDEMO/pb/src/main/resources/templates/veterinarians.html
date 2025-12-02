@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Clínica y Veterinaria Colitas Felices</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 0.7s ease-out both;
+    }
+
+    .hover-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Barra superior -->
+  <header
+    class="h-16 bg-green-900 text-white py-4 px-6 flex justify-between items-center w-full fixed top-0 z-20 shadow-lg">
+    <div class="flex items-center gap-4">
+      <button onclick="toggleSidebar()" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <h1 class="text-xl font-bold">Colitas Felices</h1>
+    </div>
+    <span th:text="'Bienvenido, ' + ${dashboard.fullName}" class="text-sm md:text-base"></span>
+  </header>
+
+  <div class="flex w-full min-h-screen">
+    <aside id="sidebar" class="fixed top-[64px] md:top-16 left-0 w-64 h-screen bg-gray-800 text-white flex flex-col justify-between z-20
+              transform md:translate-x-0 -translate-x-full transition-transform duration-300 ease-in-out">
+      <div>
+        <nav class="flex flex-col p-4 space-y-4">
+          <!-- Dashboard -->
+          <a th:href="@{/dashboard}" class="flex items-center gap-3 text-green-400 bg-gray-700 p-2 rounded">
+            <i class="fa-solid fa-table-columns"></i>
+            Dashboard
+          </a>
+
+          <!-- Agendar Cita -->
+          <a th:href="@{/book-appointment}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+            <i class="fa-solid fa-calendar-days"></i>
+            Agendar Cita
+          </a>
+
+          <!-- Ver Citas -->
+          <a th:href="@{/appointments}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+              class="fa-solid fa-clock"></i>
+            Ver Citas
+          </a>
+
+          <!-- Cancelar Cita -->
+          <a th:href="@{/cancel-appointment}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+              class="fa-solid fa-calendar-xmark"></i>
+            Cancelar Cita
+          </a>
+
+          <!-- Veterinarios -->
+          <a th:href="@{/veterinarians}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700"><i
+              class="fa-solid fa-stethoscope"></i>
+            Veterinarios
+          </a>
+
+          <!-- Vacunación -->
+          <a th:href="@{/vaccination}" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+            <i class="fa-solid fa-syringe"></i>
+            Vacunación
+          </a>
+          <!-- Botón de cierre de sesión -->
+          <button onclick="logout()"
+            class="m-4 flex items-center justify-center gap-2 bg-gray-100 text-red-500 px-4 py-2 rounded hover:bg-gray-200">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+          </button>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="flex-1 bg-gray-100 min-h-screen pt-24 md:pt-24 ml-0 md:ml-64 px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-center text-blue-800 mb-12 animate-fade-in-up">👩‍⚕️ Nuestros
+          Veterinarios</h2>
+
+        <div id="veterinariosContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Cards dinámicas -->
+        </div>
+    </main>
+  </div>
+
+  <script>
+    //OCULTAR SIDEBAR TIPO HAMBURGUESITA
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('-translate-x-full');
+    }
+
+    // Cerrar sidebar al hacer clic en enlaces (solo en móvil)
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('#sidebar a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 768) {
+            document.getElementById('sidebar').classList.add('-translate-x-full');
+          }
+        });
+      });
+
+      // Cerrar si se hace clic fuera del sidebar en móvil
+      document.addEventListener('click', (e) => {
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.querySelector('button[onclick="toggleSidebar()"]');
+
+        if (
+          window.innerWidth < 768 &&
+          !sidebar.contains(e.target) &&
+          !toggleBtn.contains(e.target)
+        ) {
+          sidebar.classList.add('-translate-x-full');
+        }
+      });
+    });
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    fetch("/api/client/veterinarians", {
+      credentials: "include"
+    })
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("veterinariosContainer");
+        data.forEach(vet => {
+          const card = document.createElement("div");
+          card.className = "bg-white rounded-2xl shadow-lg p-6 hover-card animate-fade-in-up";
+
+          card.innerHTML = `
+    <div class="flex flex-col items-center text-center">
+      <img src="img/vetgato.jpg" alt="Veterinario" class="w-24 h-24 object-cover rounded-full shadow mb-4" />
+      <h3 class="text-lg font-bold text-gray-800 mb-1">Dr. ${vet.nombreCompleto}</h3>
+      <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 text-xs rounded-full mb-2">${vet.especialidad}</span>
+      <p class="text-sm text-gray-600">Profesional con vocación para el cuidado de tus mascotas.</p>
+    </div>
+  `;
+
+          container.appendChild(card);
+        });
+      });
+
+    function logout() {
+      document.cookie = "jwt=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+      window.location.href = "/";
+    }
+  </script>
+
+</body>
+
+</html>

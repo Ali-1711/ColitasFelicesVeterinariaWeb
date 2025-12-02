@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9a8c3e86-8848-455b-ab15-073a4032b172" name="Changes" comment="Cambios Pago, citasvet y derivacioninterno">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/VetAttendRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VetAppointmentDetailResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/AdminAppointmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/AdminPaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/ServiceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/VetInternService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/templates/payment_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/admin/admin_appointments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/admin/admin_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/admin/admin_payments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/admin/admin_services.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/admin/admin_users.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/css/vet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/28dejulio.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/LOGO_PB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/alimentacion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/cirujia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/gatitolab.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/image.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/local.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/logo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/medicina.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/perritos3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/perroguinando.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/portada.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/practicantes1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/practicantes2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/producto.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/prueba.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/senioyperro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/img/vetgato.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/intern/Intern_appointments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/intern/intern_attend.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/intern/intern_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/intern/intern_validated.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/vet/vet_assign.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/vet/veterinarian_appointments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/vet/veterinarian_attend.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/vet/veterinarian_clinicalreport.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/vet/veterinarian_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/vet/veterinarian_reports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/vet/veterinarian_schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/static/vet/veterinarian_validate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/templates/add-pet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/templates/book_appointment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/templates/calendar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/templates/cancel_booking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/templates/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/templates/payment_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/templates/show_appointments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/templates/vaccination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PuenteBlancoDEMO02-2/resources/templates/veterinarians.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PuenteBlancoDEMO02-2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/.hintrc" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/.hintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/.idea/PuenteBlancoDEMO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/.idea/PuenteBlancoDEMO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/PbApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/PbApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/config/ChartGeneratorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/config/ChartGeneratorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/config/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/config/JpaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/config/MailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/config/MailConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/config/PasswordGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/config/PasswordGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/config/StripeConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/config/StripeConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/AppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/admin/AdminAppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/admin/AdminAppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/admin/AdminDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/admin/AdminDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/admin/AdminPaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/admin/AdminPaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/admin/AdminServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/admin/AdminServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/admin/AdminUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/admin/AdminUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/AddAppointmentClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/AddAppointmentClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/AppointmentCancelClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/AppointmentCancelClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/AppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/CalendarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/CitaClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/CitaClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/HorarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/HorarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/PasswordRecoveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/PasswordRecoveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/PetClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/PetClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/PetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/PetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/ServiceClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/ServiceClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/VaccinationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/VaccinationViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/VeterinarianClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/VeterinarianClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/VeterinarianViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/VeterinarianViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/view/AddAppointmentViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/view/AddAppointmentViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/view/AppointmentShowClientViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/view/AppointmentShowClientViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/view/CalendarViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/view/CalendarViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/view/CancelBookingViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/view/CancelBookingViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/view/DashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/view/DashboardViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/client/view/PaymentViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/client/view/PaymentViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/general/ReniecController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/general/ReniecController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/interno/InternAppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/interno/InternAppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/interno/InternAttendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/interno/InternAttendController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/ReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/VetAppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/VetAppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/VetAssignInternController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/VetAssignInternController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/VetDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/VetDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/VetHorarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/VetHorarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/VetInternController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/VetInternController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/VetMedicalHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/VetMedicalHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/VetMedicalHistoryReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/VetMedicalHistoryReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/VetPatientHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/VetPatientHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/VetValidateAppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/VetValidateAppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/view/VetAttendAppointmentViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/view/VetAttendAppointmentViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/controller/vet/view/VetDashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/controller/vet/view/VetDashboardViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/EmailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/EmailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/dashboard/DashboardClientResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/dashboard/DashboardClientResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/dashboard/DashboardVetName.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/dashboard/DashboardVetName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/reportes/CitaCanceladaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/reportes/CitaCanceladaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/reportes/CitaPorFechaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/reportes/CitaPorFechaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/reportes/CitaPorMascotaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/reportes/CitaPorMascotaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/reportes/HistorialMedicoMascotaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/reportes/HistorialMedicoMascotaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/AdminCreateServiceRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/AdminCreateServiceRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/AdminCreateUserRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/AdminCreateUserRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/AdminUpdateAppointmentRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/AdminUpdateAppointmentRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/AdminUpdateUserRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/AdminUpdateUserRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/AppointmentRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/AppointmentRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/AttendAppointmentRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/AttendAppointmentRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/DesactivacionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/DesactivacionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/HorarioUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/HorarioUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/InternAttendRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/InternAttendRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/LoginRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/LoginRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/RegisterInternDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/RegisterInternDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/RegisterUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/RegisterUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/RegisterVeterinarianDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/RegisterVeterinarianDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/ReportDateRangeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/ReportDateRangeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/StripePaymentRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/StripePaymentRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/VetAppointmentStatusUpdateRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/VetAppointmentStatusUpdateRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/request/VetAssignInternRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/request/VetAssignInternRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AdminAlertResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AdminAlertResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AdminAppointmentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AdminAppointmentResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AdminMonthlyRevenueResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AdminMonthlyRevenueResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AdminPaymentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AdminPaymentResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AdminServiceResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AdminServiceResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AdminUserResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AdminUserResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AppointmentCalendarResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AppointmentCalendarResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AppointmentCancelOptionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AppointmentCancelOptionDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AppointmentDetailResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AppointmentDetailResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AppointmentListResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AppointmentListResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AppointmentPaidResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AppointmentPaidResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/AppointmentScheduledResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/AppointmentScheduledResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/InternAppointmentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/InternAppointmentResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/InternCitaValidadaResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/InternCitaValidadaResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/LoginResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/LoginResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/ServiceResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/ServiceResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/StripePaymentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/StripePaymentResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/VetAppointmentInternDetailResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VetAppointmentInternDetailResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/VetAppointmentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VetAppointmentResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/VetAppointmentValidateResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VetAppointmentValidateResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/VetClientWithPetResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VetClientWithPetResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/VetClinicalRecordResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VetClinicalRecordResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/VetHistoryPetResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VetHistoryPetResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/VetInternSimpleResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VetInternSimpleResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/VetPatientListResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VetPatientListResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/VeterinarianListResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VeterinarianListResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/response/VeterinarianResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VeterinarianResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/dto/view/VaccineDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/view/VaccineDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/AtencionMedica.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/AtencionMedica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/AudityEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/AudityEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/Cita.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/Cita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/Horario.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/Horario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/Pago.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/Pago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/RecoveryToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/RecoveryToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/Servicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/Servicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/TipoDocumento.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/TipoDocumento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/TipoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/TipoServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/entity/Veterinario.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/entity/Veterinario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/AtencionMedicaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/AtencionMedicaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/CitaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/CitaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/HorarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/HorarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/PagoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/PagoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/PetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/PetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/RecoveryTokenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/RecoveryTokenRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/ServiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/TipoDocumentoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/TipoDocumentoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/TipoServicioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/TipoServicioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/repository/VeterinarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/repository/VeterinarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/security/AuthUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/security/AuthUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/security/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/security/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AdminAppointmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AdminAppointmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AdminDashboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AdminDashboardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AdminPaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AdminPaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AdminServiceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AdminServiceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AdminUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AdminUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AppointmentCancelClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AppointmentCancelClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AppointmentClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AppointmentClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AppointmentReminderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AppointmentReminderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AppointmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AppointmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AppointmentShowClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AppointmentShowClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/CitaClienteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/CitaClienteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/DashboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/DashboardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/EmailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/HorarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/HorarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/InternAppointmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/InternAppointmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/InternAttendServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/InternAttendServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/PagoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/PagoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/RecoveryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/RecoveryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/ReniecServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/ReniecServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/ReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/ReportServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/ServiceClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/ServiceClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/ServiceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/ServiceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/StripePaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/StripePaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/VetAppointmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/VetAppointmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/VetAssignInternServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/VetAssignInternServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/VetClinicalRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/VetClinicalRecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/VetHorarioUpdateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/VetHorarioUpdateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/VetInternServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/VetInternServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/VetMedicalHistoryReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/VetMedicalHistoryReportServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/VetPatientHistoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/VetPatientHistoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/VeterinarianClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/VeterinarianClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/impl/VeterinarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/impl/VeterinarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/AdminAppointmentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/AdminDashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/AdminDashboardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/AdminPaymentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/AdminServiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/AdminServiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/AdminUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/AdminUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/AppointmentCancelClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/AppointmentCancelClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/AppointmentClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/AppointmentClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/AppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/AppointmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/AppointmentShowClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/AppointmentShowClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/CitaClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/CitaClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/DashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/DashboardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/HorarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/HorarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/InternAppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/InternAppointmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/InternAttendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/InternAttendService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/PagoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/PagoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/PetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/RecoveryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/RecoveryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/ReniecService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/ReniecService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/ServiceClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/ServiceClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/ServiceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/StripePaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/StripePaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/VetAppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/VetAppointmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/VetAssignInternService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/VetAssignInternService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/VetClinicalRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/VetClinicalRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/VetHorarioUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/VetHorarioUpdateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/VetInternService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/VetMedicalHistoryReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/VetMedicalHistoryReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/VetPatientHistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/VetPatientHistoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/VeterinarianClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/VeterinarianClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/VeterinarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/VeterinarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/interfaces/vetDashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/interfaces/vetDashboardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/pdf/PdfMedicalHistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/pdf/PdfMedicalHistoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/java/com/puenteblanco/pb/services/pdf/PdfReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/services/pdf/PdfReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/admin/admin_appointments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/admin/admin_appointments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/admin/admin_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/admin/admin_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/admin/admin_payments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/admin/admin_payments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/admin/admin_services.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/admin/admin_services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/admin/admin_users.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/admin/admin_users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/css/vet.css" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/css/vet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/01.png" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/03.png" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/28dejulio.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/28dejulio.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/LOGO_PB.png" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/LOGO_PB.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/alimentacion.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/alimentacion.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/cirujia.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/cirujia.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/gatitolab.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/gatitolab.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/image.ico" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/image.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/local.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/local.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/logo.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/logo.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/medicina.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/medicina.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/perritos3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/perritos3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/perroguinando.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/perroguinando.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/portada.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/portada.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/practicantes1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/practicantes1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/practicantes2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/practicantes2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/producto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/producto.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/prueba.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/prueba.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/senioyperro.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/senioyperro.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/img/vetgato.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/img/vetgato.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/intern/Intern_appointments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/intern/Intern_appointments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/intern/intern_attend.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/intern/intern_attend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/intern/intern_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/intern/intern_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/intern/intern_validated.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/intern/intern_validated.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/vet/vet_assign.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/vet/vet_assign.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/vet/veterinarian_appointments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/vet/veterinarian_appointments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/vet/veterinarian_attend.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/vet/veterinarian_attend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/vet/veterinarian_clinicalreport.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/vet/veterinarian_clinicalreport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/vet/veterinarian_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/vet/veterinarian_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/vet/veterinarian_reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/vet/veterinarian_reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/vet/veterinarian_schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/vet/veterinarian_schedule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/static/vet/veterinarian_validate.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/static/vet/veterinarian_validate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/templates/add-pet.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/templates/add-pet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/templates/book_appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/templates/book_appointment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/templates/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/templates/calendar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/templates/cancel_booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/templates/cancel_booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/templates/payment_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/templates/show_appointments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/templates/show_appointments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/templates/vaccination.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/templates/vaccination.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/main/resources/templates/veterinarians.html" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/resources/templates/veterinarians.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/test/java/com/puenteblanco/pb/PasswordEncoderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/test/java/com/colitasfelices/pb/PasswordEncoderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PuenteBlancoDEMO/pb/src/test/java/com/puenteblanco/pb/PbApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/test/java/com/colitasfelices/pb/PbApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ali-1711&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ali-1711/ColitasFelicesVeterinariaWeb.git&quot;,
+    &quot;accountId&quot;: &quot;0a04e133-66c5-4869-8c02-b252519767fc&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="321peBFrnrLVGOJfkO2du1GFzOM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ColitasFelices.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PbApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alisa/OneDrive/Documentos/ColitasFelicesVeterinariaWeb&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.1920694&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.6671533&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.ColitasFelices">
+    <configuration name="ColitasFelices" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.colitasfelices.pb.PbApplication" />
+      <module name="pb" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PbApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.puenteblanco.pb.PbApplication" />
+      <module name="pb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.puenteblanco.pb.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pb" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.colitasfelices.pb.PbApplication" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ColitasFelicesDEMO/pb" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.pb" />
+      <item itemvalue="Application.ColitasFelices" />
+      <item itemvalue="Application.PbApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PbApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a8c3e86-8848-455b-ab15-073a4032b172" name="Changes" comment="" />
+      <created>1756598025551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756598025551</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Primer commit del proyecto">
+      <option name="closed" value="true" />
+      <created>1762963880976</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762963880976</updated>
+    </task>
+    <task id="LOCAL-00002" summary="git add .&#10;git commit -m &quot;Actualización de templates HTML&quot;&#10;git push origin main">
+      <option name="closed" value="true" />
+      <created>1764085157971</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764085157997</updated>
+    </task>
+    <task id="LOCAL-00003" summary="correccion h2">
+      <option name="closed" value="true" />
+      <created>1764087506990</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764087506990</updated>
+    </task>
+    <task id="LOCAL-00004" summary="correccion h1">
+      <option name="closed" value="true" />
+      <created>1764087607311</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764087607312</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer commit del proyecto" />
+    <MESSAGE value="git add .&#10;git commit -m &quot;Actualización de templates HTML&quot;&#10;git push origin main" />
+    <MESSAGE value="correccion h2" />
+    <MESSAGE value="correccion del h1" />
+    <MESSAGE value="correccion del h1" />
+    <MESSAGE value="Cambios 26/11" />
+    <MESSAGE value="Cambios Pago, citasvet y derivacioninterno" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios Pago, citasvet y derivacioninterno" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/ColitasFelicesDEMO/pb/src/main/java/com/colitasfelices/pb/dto/response/VetAppointmentResponseDto.java</url>
+          <line>10</line>
+          <properties field="id" class="com.colitasfelices.pb.dto.response.VetAppointmentResponseDto" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ColitasFelicesVeterinariaWeb$PbApplication.ic" NAME="PbApplication Coverage Results" MODIFIED="1764155004999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.puenteblanco.pb.*</FILTER>
+    </SUITE>
+  </component>
+</project>
